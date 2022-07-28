@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Javascript，XML 轉 JSON - August - Let's Write</title>
+    <link rel="canonical" href="https://www.letswrite.tw/xml-to-json/"/>
+    <meta property="og:url" content="https://letswritetw.github.io/letswrite-xml-to-json/"/>
+    <meta property="fb:app_id" content="911000986339138"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Let's Write"/>
+    <meta property="og:title" content="Javascript，XML 轉 JSON - Augustus - Let's Write"/>
+    <meta itemprop="name" content="Javascript，XML 轉 JSON - Augustus - Let's Write"/>
+    <meta name="description" content="本篇大綱：本篇要解決的問題。下載 JS 程式碼。取 XML 資料並轉成 JSON。轉出 JSON 的資料放進 OSM。本篇除了一個套件，也會實作取一個政府公開的 XML 資料，並放進開源的地圖 OSM 裡，再加上 marker，製作一個捷運站點地圖。"/>
+    <meta property="og:description" content="本篇大綱：本篇要解決的問題。下載 JS 程式碼。取 XML 資料並轉成 JSON。轉出 JSON 的資料放進 OSM。本篇除了一個套件，也會實作取一個政府公開的 XML 資料，並放進開源的地圖 OSM 裡，再加上 marker，製作一個捷運站點地圖。"/>
+    <meta itemprop="description" content="本篇大綱：本篇要解決的問題。下載 JS 程式碼。取 XML 資料並轉成 JSON。轉出 JSON 的資料放進 OSM。本篇除了一個套件，也會實作取一個政府公開的 XML 資料，並放進開源的地圖 OSM 裡，再加上 marker，製作一個捷運站點地圖。"/>
+    <meta itemprop="image" content="https://letswritetw.github.io/letswrite-xml-to-json/fb.jpg"/>
+    <meta property="og:image" content="https://letswritetw.github.io/letswrite-xml-to-json/fb.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="Javascript，XML 轉 JSON"/>
+    <link rel="shortcut icon" href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="crossorigin"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.1/dist/L.Control.Locate.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="dist/style.min.css" media="screen"/>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main: '#42A6F7',
+            }
+          }
+        }
+      }
+      
+    </script>
+    <!-- Google Tag Manager-->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PGQ9WQT');
+    </script>
+  </head>
+  <body class="bg-slate-900 text-white">
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGQ9WQT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div class="container mx-auto py-10">
+      <div class="text-center">
+        <h1 class="mb-6 font-bold text-4xl">Javascript，XML 轉 JSON</h1>
+        <p>筆記文：<a class="text-main underline hover:no-underline" href="https://www.letswrite.tw/xml-to-json/">Let's Write</a></p>
+        <hr class="my-8 border-0 border-b border-zinc-200 border-opacity-40"/>
+      </div>
+      <!-- map-->
+      <div class="relative w-full h-0 pb-[56.25%]">
+        <div class="absolute w-full h-full" id="map"></div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="crossorigin"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.1/dist/L.Control.Locate.min.js"></script>
+    <script src="dist/main.min.js"></script>
+  </body>
+</html>
