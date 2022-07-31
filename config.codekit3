@@ -109,6 +109,14 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/src\/library\/national-park.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/src\/library\/national-park-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/src\/library\/xml2json.js" : {
       "bF" : 0,
       "ft" : 64,
